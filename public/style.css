@@ -33,21 +33,7 @@ body.loaded {
     z-index: -1; /* Diğer içeriklerin üstüne gelmesini önler */
 }
 
-.card {
-    position: relative;
-    opacity: 0.7;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    height: 90px;
-    backdrop-filter: blur(10px);
-    background: linear-gradient(135deg, rgba(245, 243, 243, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border:1px solid rgba(255, 255, 255, 0.18);
-    
-}
+
 
 .profile-photo {
     margin-left: -15px;
@@ -97,9 +83,9 @@ body.loaded {
     font-size: 60px;
     color: #ffffff;
     text-shadow:
-     0 0 5px rgb(237, 236, 241),
-        0 0 10px rgba(213, 213, 225, 0.662),
-        0 0 20px rgba(237, 238, 241, 0.551);
+        0 0 5px rgb(237, 236, 241),
+        0 0 10px rgba(255, 255, 255, 0.905),
+        0 0 20px rgba(255, 255, 255, 0.756);
     transition: text-shadow 0.3s ease-in-out;
 }
 
@@ -108,10 +94,6 @@ body.loaded {
                  0 0 20px rgba(255, 255, 255, 1),
                  0 0 40px rgba(255, 255, 255, 1);
 }
-
-
-
-
 
 
 .social-icons {
@@ -125,18 +107,78 @@ body.loaded {
     align-items: center;
 }
 
-
- 
-        
-
-
-
-
-.card-container {
-    position: relative;
+.social-icons:hover {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 10px);
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Ortalamak için */
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    position: relative;
+    opacity: 0.8;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+    height: 100px;
+    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(245, 243, 243, 0.1), rgba(255, 255, 255, 0));
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    
+    /* İçeriği hizala */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.song-cover {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    outline: none; 
+}
+
+button img {
+    width: 35px;
+    height: 35px;
+    filter: invert(1) brightness(1000%) drop-shadow(0 0 5px white); 
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+button:active img,
+button:hover img {
+    filter: invert(1) brightness(1000%) drop-shadow(0 0 10px white);
+}
+
+.hidden {
+    display: none;
 }
 
 
