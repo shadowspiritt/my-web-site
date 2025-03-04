@@ -9,7 +9,7 @@
 body {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    color: rgb(64, 64, 64);
+    color: rgb(38, 38, 38);
     font-family: 'Poppins', sans-serif;
     text-align: center;
     display: flex;
@@ -32,7 +32,9 @@ body.loaded {
     z-index: -10; /* Diğer içeriklerin üstüne gelmesini önler */
 }
 
-
+#song-title {
+    color: white;
+}
 
 .profile-photo {
     margin-left: -15px;
