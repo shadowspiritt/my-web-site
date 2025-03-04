@@ -48,8 +48,8 @@ window.addEventListener("load", function() {
 
 
 const tracks = [
-    { src: "musics/goodforyou.mp3", title: "Good For You", cover: "images/goodforyou.jpg" },
     { src: "musics/gangunit.mp3", title: "Gang Unit", cover: "images/gangunit.jpg" },
+    { src: "musics/goodforyou.mp3", title: "Good For You", cover: "images/goodforyou.jpg" },
     { src: "musics/ımgod.mp3", title: "I'm God", cover: "images/imgod.jpeg" }
 ];
 
