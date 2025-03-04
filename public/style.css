@@ -9,7 +9,7 @@
 body {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    color: rgb(72, 72, 72);
+    color: rgb(64, 64, 64);
     font-family: 'Poppins', sans-serif;
     text-align: center;
     display: flex;
