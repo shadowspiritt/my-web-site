@@ -82,16 +82,16 @@ body.loaded {
     font-size: 60px;
     color: #ffffff;
     text-shadow:
-        0 0 5px rgb(237, 236, 241),
-        0 0 10px rgba(255, 255, 255, 0.905),
-        0 0 20px rgba(255, 255, 255, 0.756);
-    transition: text-shadow 0.3s ease-in-out;
+        0 0 5px rgb(218, 9, 204),
+        0 0 10px rgba(218, 9, 204, 0.701),
+        0 0 20px rgba(218, 9, 204, 0.519);
+    transition: text-shadow 0.2s ease-in-out;
 }
 
 .glow:hover {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 1),
-                 0 0 20px rgba(255, 255, 255, 1),
-                 0 0 40px rgba(255, 255, 255, 1);
+    text-shadow: 0 0 10px rgb(218, 9, 204),
+                 0 0 20px rgba(218, 9, 204, 0.862),
+                 0 0 40px rgba(218, 9, 204, 0.762);
 }
 
 
@@ -143,8 +143,8 @@ body.loaded {
 }
 
 .song-cover {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -152,7 +152,7 @@ body.loaded {
 .controls {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 3px;
 }
 
 button {
@@ -166,18 +166,32 @@ button {
 button img {
     width: 35px;
     height: 35px;
-    filter: invert(1) brightness(1000%) drop-shadow(0 0 5px white); 
+    filter: invert(1) brightness(1000%) drop-shadow(0 0 5px rgb(218, 9, 204)); 
     transition: 0.3s;
     pointer-events: none;
 }
 
 button:active img,
 button:hover img {
-    filter: invert(1) brightness(1000%) drop-shadow(0 0 10px white);
+    filter: invert(1) brightness(1000%) drop-shadow(0 0 10px rgb(218, 9, 204));
 }
 
 .hidden {
     display: none;
+}
+
+
+ 
+        
+
+
+
+
+.card-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ortalamak için */
 }
 
 
