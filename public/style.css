@@ -9,7 +9,6 @@
 body {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    background-color: #121212;
     color: white;
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -33,21 +32,7 @@ body.loaded {
     z-index: -1; /* Diğer içeriklerin üstüne gelmesini önler */
 }
 
-.card {
-    position: relative;
-    opacity: 0.7;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    height: 90px;
-    backdrop-filter: blur(10px);
-    background: linear-gradient(135deg, rgba(245, 243, 243, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border:1px solid rgba(255, 255, 255, 0.18);
-    
-}
+
 
 .profile-photo {
     margin-left: -15px;
@@ -96,18 +81,18 @@ body.loaded {
 .glow {
     font-size: 60px;
     color: #ffffff;
-    transition: text-shadow 0.3s ease-in-out;
+    text-shadow:
+        0 0 5px rgb(218, 9, 204),
+        0 0 10px rgba(218, 9, 204, 0.701),
+        0 0 20px rgba(218, 9, 204, 0.519);
+    transition: text-shadow 0.2s ease-in-out;
 }
 
 .glow:hover {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 1),
-                 0 0 20px rgba(255, 255, 255, 1),
-                 0 0 40px rgba(255, 255, 255, 1);
+    text-shadow: 0 0 10px rgb(218, 9, 204),
+                 0 0 20px rgba(218, 9, 204, 0.862),
+                 0 0 40px rgba(218, 9, 204, 0.762);
 }
-
-
-
-
 
 
 .social-icons {
@@ -119,6 +104,80 @@ body.loaded {
     gap: 15px;
     justify-content: center;
     align-items: center;
+}
+
+.social-icons:hover {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    position: relative;
+    opacity: 0.8;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+    height: 100px;
+    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, rgba(245, 243, 243, 0.1), rgba(255, 255, 255, 0));
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    
+    /* İçeriği hizala */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.song-cover {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    outline: none; 
+}
+
+button img {
+    width: 35px;
+    height: 35px;
+    filter: invert(1) brightness(1000%) drop-shadow(0 0 5px rgb(218, 9, 204)); 
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+button:active img,
+button:hover img {
+    filter: invert(1) brightness(1000%) drop-shadow(0 0 10px rgb(218, 9, 204));
+}
+
+.hidden {
+    display: none;
 }
 
 
