@@ -22,40 +22,16 @@ window.addEventListener("load", function() {
     document.body.classList.add("loaded");
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    function animateText(selector) {
-        let text = document.querySelector(selector);
-        let splitText = text.innerText.split(""); 
-        text.innerHTML = ""; 
-
-        splitText.forEach((char, i) => {
-            let span = document.createElement("span");
-            span.innerText = char === " " ? "\u00A0" : char; // Boşlukları koru
-            span.style.display = "inline-block"; 
-            span.style.opacity = 0;
-            span.style.animation = `fadeInGlow 0.5s ease-out forwards ${i * 0.2}s`; // Harf harf geçiş
-            text.appendChild(span);
-        });
-    }
-
-    animateText(".animated-text");
-
-});
-
-window.addEventListener("load", function() {
-    document.body.classList.add("loaded");
-});
-
 
 const tracks = [
-    { src: "musics/goodforyou.mp3", title: "Good For You", cover: "images/goodforyou.jpg" },
     { src: "musics/gangunit.mp3", title: "Gang Unit", cover: "images/gangunit.jpg" },
+    { src: "musics/goodforyou.mp3", title: "Good For You", cover: "images/goodforyou.jpg" },
     { src: "musics/ımgod.mp3", title: "I'm God", cover: "images/imgod.jpeg" }
 ];
 
 let currentTrackIndex = 0;
 let audio = new Audio(tracks[currentTrackIndex].src);
-audio.volume = 0.5; // Varsayılan ses seviyesi
+audio.volume = 0.2; // Varsayılan ses seviyesi
 
 // HTML Elemanlarını Seç
 const playBtn = document.getElementById("play");
@@ -109,7 +85,3 @@ playBtn.addEventListener("click", playMusic);
 pauseBtn.addEventListener("click", pauseMusic);
 prevBtn.addEventListener("click", () => changeTrack(-1));
 nextBtn.addEventListener("click", () => changeTrack(1));
-
-
-
-
