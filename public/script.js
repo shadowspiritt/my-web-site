@@ -18,10 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-window.addEventListener("load", function() {
-    document.body.classList.add("loaded");
-});
-
 document.addEventListener("DOMContentLoaded", function () {
     function animateText(selector) {
         let text = document.querySelector(selector);
