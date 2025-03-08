@@ -84,16 +84,16 @@ body.loaded {
     font-size: 60px;
     color: #ffffff;
     text-shadow:
-        0 0 5px rgb(218, 9, 204),
-        0 0 10px rgba(218, 9, 204, 0.701),
-        0 0 20px rgba(218, 9, 204, 0.519);
+        0 0 5px rgb(255, 255, 255),
+        0 0 10px rgba(255, 255, 255, 0.701),
+        0 0 20px rgba(255, 255, 255, 0.519);
     transition: text-shadow 0.2s ease-in-out;
 }
 
 .glow:hover {
-    text-shadow: 0 0 10px rgb(218, 9, 204),
-                 0 0 20px rgba(218, 9, 204, 0.862),
-                 0 0 40px rgba(218, 9, 204, 0.762);
+    text-shadow: 0 0 10px rgb(255, 255, 255),
+                 0 0 20px rgba(255, 255, 255, 0.862),
+                 0 0 40px rgba(255, 255, 255, 0.762);
 }
 
 
